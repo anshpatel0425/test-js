@@ -24,8 +24,8 @@ console.log(id === anotherId);
 
 const heros = ["shaktiman", "naagraj", "doga"];
 let myObj = {
-    name: "hitesh",
-    age: 22,
+    name: "Ansh",
+    age: 20,
 }
 
 const myFunction = function(){
@@ -35,3 +35,31 @@ const myFunction = function(){
 console.log(typeof anotherId);
 
 // https://262.ecma-international.org/5.1/#sec-11.4.3
+
+
+
+// ******************************************************
+
+// Memory
+
+let myytname = "AnshPatel";
+
+let anothername = myytname;
+anothername = "Rish"
+
+
+console.log(anothername);
+console.log(myytname);
+
+let userOne = {
+    code: "Ansh",
+    age: 20
+}
+
+let userTwo = userOne;
+
+userTwo.code = "RISH"
+
+console.log(userOne.code);
+console.log(userTwo.code);
+
