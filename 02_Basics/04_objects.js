@@ -55,3 +55,20 @@ console.log(Object.entries(myUser)); /*convert every key and value pairs into di
 // very useful to check the property exixts in object or not
 
 console.log(myUser.hasOwnProperty('IsLoggedIn')); /*automatically checks the property exixtance */
+
+
+// destructuring in object 
+
+const course = {
+    courseName : "js in hindi",
+    coursePrice : "999",
+    courseInstuctor : "hitesh",
+}
+// basic way to acces value
+console.log(course.courseInstuctor);
+// optimal way to access value
+const {courseInstuctor} = course;
+console.log(courseInstuctor);
+// another way
+const {courseInstuctor: instuctor} = course;
+console.log(instuctor);
