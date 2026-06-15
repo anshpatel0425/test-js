@@ -71,3 +71,44 @@ function MyNewName(username = "sam"){ /*this sam will used when user not give an
 console.log(MyNewName()); /*this will use sam as a input */
 console.log(MyNewName("Patel"));
 
+// function for shopping cart means when the input is unknown
+
+function CalculateCartPrice(...num1){ /*... called rest operator */
+    return num1;
+}
+console.log(CalculateCartPrice(100, 200, 300, 400)); /*now i can give as amny values as i want and it returns array of that values */
+
+// interview 
+function Cart1 (val1, val2, ...num2){ /*val 1 and 2 will take 1st two values */
+    return num2;
+}
+console.log(Cart1(500, 8000, 750, 45, 580, 777)); /*1st two values will go in val1 and val2 and rest others go in num2 */
+
+// using object in function
+const user ={
+    username: "ANSH",
+    id: "A123",
+    email: "ansh@gmail.com"
+}
+function handleObject(anyobject){
+    console.log(`my username is ${anyobject.username} and id is ${anyobject.id}`);
+    
+}
+handleObject(user);
+
+// we can directly pass the object
+handleObject({
+    username: "Rish",
+    id: "R123"
+})
+
+// passing array in function
+
+const myNewArray = [100, 4000, 800, 9000];
+
+function PrintSecondValueOfArray (getArray){
+    return getArray[1]; /*it gives second values of the array */
+}
+console.log(PrintSecondValueOfArray(myNewArray));
+// directly pass the array
+console.log(PrintSecondValueOfArray([100, 50, 40, 25]));
