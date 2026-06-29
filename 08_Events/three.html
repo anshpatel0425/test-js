@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Chai Aur Javascript</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    // set interval function runs multiple time on setted time interval
+
+    const SayDate = function(){
+        console.log("Ansh", Date.now());
+    }
+    // setInterval(SayDate, 1000);
+    // another way
+    const SayName = function(str){
+        console.log(str, Date.now());
+    }
+   const IntervalId =  setInterval(SayName, 1000, "Rish") /*you can take any string as a parameter */
+
+    // control this using buttons
+    document.querySelector('#stop').addEventListener('click', function(){
+        clearInterval(IntervalId)
+        console.log("You Stopped Working");
+    })
+    document.querySelector('#start').addEventListener('click', function(){
+        setInterval(SayName, 1000, "Patel")
+        console.log("You Started Working");
+        
+    })
+</script>
+</html>
